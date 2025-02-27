@@ -300,6 +300,30 @@ ASide:
           Add: true
           X: 48
           Y: 96
+  - Room: "04e" # 04e copy
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+    Tweaks:
+      - ID: 1
+        Name: "cassette"
+        Update:
+          Remove: true
+      - Name: "spawn"
+        X: 48
+        Y: 128
+        Update:
+          Add: true
+          Default: true
+          X: 48
+          Y: 128
+      - Name: "spawn"
+        ID: 0
+        Update:
+          Remove: true
   - Room: "05"
     Holes:
     - Side: Right
@@ -1415,6 +1439,36 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: out
+  - Room: "boss-00" # boss-00 copy
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: out
+    - Side: Down
+      Idx: 0
+      Kind: in
+    Tweaks: 
+    - Name: "spawn"
+      ID: 68
+      Update:
+        X: 584
+        Y: 104
+    - Name: "invisibleBarrier"
+      ID: 53
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 47
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 48
+      Update:
+        Remove: true
+    - Name: "eventTrigger"
+      ID: 1
+      Update: 
+        Remove: true
   - Room: "boss-01"
     Holes:
     - Side: Up
@@ -1423,6 +1477,37 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: out
+  - Room: "boss-01" # boss-01 copy
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+        - Dashes: zero
+          Difficulty: expert
+    - Side: Down
+      Idx: 0
+      Kind: in
+    Tweaks: 
+    - Name: "spawn"
+      ID: 1
+      Update:
+        X: 664
+        Y: 152
+    - Name: "invisibleBarrier"
+      ID: 78
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 3
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 46
+      Update:
+        Remove: true
   - Room: "boss-02"
     Holes:
     - Side: Up
@@ -1433,6 +1518,37 @@ ASide:
       Kind: out
       ReqOut:
         Dashes: one
+  - Room: "boss-02" # boss-02 copy
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+        - Dashes: zero
+          Difficulty: expert
+    - Side: Down
+      Idx: 0
+      Kind: in
+    Tweaks: 
+    - Name: "spawn"
+      ID: 1
+      Update:
+        X: 504
+        Y: 152
+    - Name: "invisibleBarrier"
+      ID: 73
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 47
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 48
+      Update:
+        Remove: true
   - Room: "boss-03"
     Holes:
     - Side: Up
@@ -1441,6 +1557,34 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: out
+  - Room: "boss-03" # boss-03 copy
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+    - Side: Down
+      Idx: 0
+      Kind: in
+    Tweaks: 
+    - Name: "spawn"
+      ID: 73
+      Update:
+        X: 536
+        Y: 160
+    - Name: dashBlock
+      ID: 97
+      Update:
+        Remove: true
+    - Name: finalBoss
+      ID: 79
+      Update:
+        Remove: true
+    - Name: "invisibleBarrier"
+      ID: 76
+      Update:
+        Remove: true
   - Room: "boss-04"
     Holes:
     - Side: Up
@@ -1449,6 +1593,32 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: out
+  - Room: "boss-04" # boss-04
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: out
+    - Side: Right
+      Idx: 0
+      Kind: in
+    Tweaks: 
+    - Name: "spawn"
+      ID: 73
+      Update:
+        X: 280
+        Y: 96
+    - Name: "invisibleBarrier"
+      ID: 76
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 108
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 98
+      Update:
+        Remove: true
   - Room: "boss-05"
     Holes:
     - Side: Left
@@ -1459,6 +1629,34 @@ ASide:
       Kind: out
       ReqOut:
         Dashes: one
+  - Room: "boss-05" # boss-05 copy
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+    - Side: Down
+      Idx: 0
+      Kind: in
+    Tweaks: 
+    - Name: "spawn"
+      ID: 73
+      Update:
+        X: 200
+        Y: 72
+    - Name: "invisibleBarrier"
+      ID: 111
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 108
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 98
+      Update:
+        Remove: true
   - Room: "boss-06"
     Holes:
     - Side: Up
@@ -1469,6 +1667,34 @@ ASide:
       Kind: out
       ReqOut:
         Dashes: one
+  - Room: "boss-06" # boss-06 copy
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+    - Side: Down
+      Idx: 0
+      Kind: in
+    Tweaks: 
+    - Name: "spawn"
+      ID: 73
+      Update:
+        X: 448
+        Y: 96
+    - Name: "invisibleBarrier"
+      ID: 111
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 112
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 98
+      Update:
+        Remove: true
   - Room: "boss-07"
     Holes:
     - Side: Up
@@ -1477,6 +1703,34 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: out
+  - Room: "boss-07" # boss-07 copy
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+    - Side: Down
+      Idx: 0
+      Kind: in
+    Tweaks: 
+    - Name: "spawn"
+      ID: 73
+      Update:
+        X: 592
+        Y: 152
+    - Name: "invisibleBarrier"
+      ID: 111
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 119
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 98
+      Update:
+        Remove: true
   - Room: "boss-08"
     Holes:
     - Side: Up
@@ -1487,6 +1741,37 @@ ASide:
       Kind: out
       ReqOut:
         Dashes: one
+  - Room: "boss-08" # boss-08
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: two
+        - Dashes: one
+          Difficulty: master
+    - Side: Down
+      Idx: 0
+      Kind: in
+    Tweaks: 
+    - Name: "spawn"
+      ID: 73
+      Update:
+        X: 256
+        Y: 432
+    - Name: "invisibleBarrier"
+      ID: 111
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 134
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 98
+      Update:
+        Remove: true
   - Room: "boss-09"
     Holes:
     - Side: Up
@@ -1495,6 +1780,37 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: out
+  - Room: "boss-09" # boss-09
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: two
+        - Dashes: one
+          Difficulty: master # spinner cbs suck
+    - Side: Right
+      Idx: 0
+      Kind: in
+    Tweaks: 
+    - Name: "spawn"
+      ID: 152
+      Update:
+        X: 544
+        Y: 72 
+    - Name: "invisibleBarrier"
+      ID: 111
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 170
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 171
+      Update:
+        Remove: true
   - Room: "boss-10"
     Holes:
     - Side: Right
@@ -1504,10 +1820,41 @@ ASide:
         Or:
         - Dashes: one
         - Dashes: zero
-          Difficulty: perfect
+          Difficulty: expert
     - Side: Left
       Idx: 0
       Kind: in
+  - Room: "boss-10" # boss-10 copy
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: in
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+        - Dashes: zero
+          Difficulty: expert
+    Tweaks: 
+    - Name: "spawn"
+      ID: 152
+      Update:
+        X: 368
+        Y: 112 
+    - Name: "invisibleBarrier"
+      ID: 111
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 170
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 210
+      Update:
+        Remove: true
   - Room: "boss-11"
     Holes:
     - Side: Left
@@ -1518,6 +1865,34 @@ ASide:
       Kind: out
       ReqOut:
         Dashes: one
+  - Room: "boss-11" # boss-11
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+    - Side: Down
+      Idx: 0
+      Kind: in
+    Tweaks: 
+    - Name: "spawn"
+      ID: 73
+      Update:
+        X: 688
+        Y: 80
+    - Name: "invisibleBarrier"
+      ID: 111
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 154
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 98
+      Update:
+        Remove: true
   - Room: "boss-12"
     Holes:
     - Side: Up
@@ -1528,6 +1903,35 @@ ASide:
       Kind: out
       ReqOut:
         Dashes: one
+  - Room: "boss-12" # boss-12 copy
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: two
+        Difficulty: expert
+    - Side: Down
+      Idx: 0
+      Kind: in
+    Tweaks: 
+    - Name: "spawn"
+      ID: 73
+      Update:
+        X: 256
+        Y: 488
+    - Name: "invisibleBarrier"
+      ID: 111
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 199
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 224
+      Update:
+        Remove: true    
   - Room: "boss-13"
     Holes:
     - Side: Up
@@ -1544,6 +1948,32 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: in
+  - Room: "boss-14" # boss-14 copy
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: in
+    - Side: Left
+      Idx: 0
+      Kind: out
+    Tweaks: 
+    - Name: "spawn"
+      ID: 454
+      Update:
+        X: 256
+        Y: 152
+    - Name: "invisibleBarrier"
+      ID: 111
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 469
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 465
+      Update:
+        Remove: true    
   - Room: "boss-15"
     Holes:
     - Side: Left
@@ -1552,6 +1982,37 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: out
+  - Room: "boss-15" # boss-15 copy
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or: 
+        - Dashes: two
+        - Dashes: one
+          Difficulty: expert
+    - Side: Down
+      Idx: 0
+      Kind: in
+    Tweaks: 
+    - Name: "spawn"
+      ID: 454
+      Update:
+        X: 304
+        Y: 136 
+    - Name: "invisibleBarrier"
+      ID: 111
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 470
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 465
+      Update:
+        Remove: true   
   - Room: "boss-16"
     Holes:
     - Side: Up
@@ -1560,6 +2021,34 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: out
+  - Room: "boss-16" # boss-16 copy
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+    - Side: Right
+      Idx: 0
+      Kind: in
+    Tweaks: 
+    - Name: "spawn"
+      ID: 454
+      Update:
+        X: 696
+        Y: 96
+    - Name: "invisibleBarrier"
+      ID: 111
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 772
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 812
+      Update:
+        Remove: true   
   - Room: "boss-17"
     Holes:
     - Side: Left
@@ -1568,6 +2057,34 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: out
+  - Room: "boss-17" # boss-17 copy
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+    - Side: Down
+      Idx: 0
+      Kind: in
+    Tweaks: 
+    - Name: "spawn"
+      ID: 454
+      Update:
+        X: 712
+        Y: 80
+    - Name: "invisibleBarrier"
+      ID: 111
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 854
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 812
+      Update:
+        Remove: true   
   - Room: "boss-18"
     Holes:
     - Side: Up
@@ -1675,13 +2192,35 @@ ASide:
     Holes:
     - Side: Up
       Idx: 0
-      Kind: out
+      Kind: inout
       Launch: 19
       ReqOut:
         Dashes: one
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
+    Tweaks:
+    - Name: "jumpthru"
+      ID: 991
+      Update:
+        X: 80
+        Y: 1984
+        Width: 16
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 144
+        Y: 376
+        Width: 48
+        Height: 8
+        Values:
+          cameraX: 0
+          cameraY: 1.5
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 168
+        Y: 352
   - Room: "after-02"
     ReqEnd:
       Difficulty: easy
@@ -2038,6 +2577,52 @@ BSide:
     - Side: Down
       Idx: 4
       Kind: None
+  - Room: "c-00" # c-00 copy
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: in
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: two
+        - Dashes: one
+          Difficulty: master
+    - Side: Down
+      Idx: 0
+      Kind: None
+    - Side: Down
+      Idx: 1
+      Kind: None
+    - Side: Down
+      Idx: 2
+      Kind: None
+    - Side: Down
+      Idx: 3
+      Kind: None
+    - Side: Down
+      Idx: 4
+      Kind: None
+    Tweaks: 
+    - Name: "spawn"
+      ID: 0
+      Update:
+        X: 552
+        Y: 112
+    - Name: "invisibleBarrier"
+      ID: 2
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 3
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 4
+      Update:
+        Remove: true
   - Room: "c-01"
     Holes:
     - Side: Right
@@ -2048,6 +2633,35 @@ BSide:
     - Side: Left
       Idx: 0
       Kind: in
+  - Room: "c-01" # c-01 copy
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: in
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: two
+        Difficulty: master
+    Tweaks: 
+    - Name: "spawn"
+      ID: 121
+      Update:
+        X: 568
+        Y: 120
+    - Name: "invisibleBarrier"
+      ID: 2
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 122
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 4
+      Update:
+        Remove: true
   - Room: "c-02"
     Holes:
     - Side: Right
@@ -2117,6 +2731,37 @@ BSide:
         Values:
           cameraX: 0.0
           cameraY: 1.0
+  - Room: "c-02" # c-02 copy
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: in
+      ReqOut:
+        Dashes: one
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: two
+        Difficulty: expert
+    Tweaks: 
+    - Name: "spawn"
+      ID: 121
+      Update:
+        X: 736
+        Y: 160
+    - Name: "invisibleBarrier"
+      ID: 2
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 340
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 510
+      Update:
+        Remove: true
   - Room: "c-03"
     Holes:
     - Side: Right
@@ -2127,6 +2772,39 @@ BSide:
     - Side: Left
       Idx: 0
       Kind: in
+  - Room: "c-03" # c-03 copy TODO: add extraspace below block
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: in
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one # both 1x and 2x need to do the funny feather thing
+        Difficulty: perfect
+    Tweaks: 
+    - Name: "spawn"
+      ID: 511
+      Update:
+        X: 704
+        Y: 104 
+    - Name: "invisibleBarrier"
+      ID: 513
+      Update:
+        Remove: true
+    - Name: "jumpThru"
+      ID: 840
+      Update:
+        Width: 16
+    - Name: "finalBoss"
+      ID: 512
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 514
+      Update:
+        Remove: true
   - Room: "c-04"
     Holes:
     - Side: Right
@@ -2183,6 +2861,35 @@ BSide:
     - Side: Down
       Idx: 0
       Kind: in
+  - Room: "d-01" # d-01 copy
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: in
+    - Side: Down
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: expert
+    Tweaks: 
+    - Name: "spawn"
+      ID: 1086
+      Update:
+        X: 880
+        Y: 144 
+    - Name: "jumpThru"
+      ID: 1276
+      Update:
+        Width: 16
+    - Name: "finalBoss"
+      ID: 1277
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 1382
+      Update:
+        Remove: true
   - Room: "d-02"
     Holes:
     - Side: Right
@@ -2193,6 +2900,37 @@ BSide:
     - Side: Left
       Idx: 0
       Kind: in
+  - Room: "d-02" # d-02 copy
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: in
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: two
+        - Dashes: one
+          Difficulty: master # demo
+    Tweaks: 
+    - Name: "spawn"
+      ID: 1411
+      Update:
+        X: 712
+        Y: 112 
+    - Name: "invisibleBarrier"
+      ID: 1518
+      Update:
+        Remove: true
+    - Name: "finalBoss"
+      ID: 1450
+      Update:
+        Remove: true
+    - Name: "dashBlock"
+      ID: 1382
+      Update:
+        Remove: true
   - Room: "d-03"
     Holes:
     - Side: Right
@@ -2252,6 +2990,32 @@ BSide:
     - Side: Left
       Idx: 0
       Kind: in
+  - Room: "d-05" # d-05 copy
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: two
+          Difficulty: hard
+        - Dashes: one
+          Difficulty: expert
+    Tweaks:
+    - Name: "blackGem"
+      ID: 2244
+      Update:
+        Values:
+          fake: true
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 1000
+        Y: 88
+    - Name: "spawn"
+      ID: 2223
+      Update:
+        Remove: true
 
 CSide:
   - Room: "00"
