@@ -73,6 +73,10 @@ namespace Celeste.Mod.Randomizer
                     {
                         continue;
                     }
+                    if (!room.Name.Contains("9-Core/A/d-08"))
+                    {
+                        continue;
+                    }
                     yield return room;
                 }
             }
@@ -143,7 +147,7 @@ namespace Celeste.Mod.Randomizer
                     // ensure first hole is up or right if on lower difficulty
                     bool firstRoom = this.Logic.CompletedTasks.Count == 1;
                     var flag = this.Logic.Settings.Difficulty >= Difficulty.Master || !firstRoom || (u.Static.HoleTarget?.Side != ScreenDirection.Down && u.Static.HoleTarget?.Side != ScreenDirection.Left);
-                    return !this.TriedEdges.Contains(u.Static) && (u.Static.HoleTarget == null || (!this.ForceWarp && this.Logic.Map.HoleFree(this.Node.Room, u.Static.HoleTarget) && flag));
+                    return !this.TriedEdges.Contains(u.Static);
                 });
                 if (available.Count == 0)
                 {
