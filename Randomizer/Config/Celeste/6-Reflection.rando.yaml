@@ -195,6 +195,9 @@ ASide:
     - Side: Right
       Idx: 1
       Kind: inout
+    - Side: Up
+      Idx: 0
+      Kind: None
     InternalEdges:
     - To: "cassette"
       ReqOut:
