@@ -3142,7 +3142,10 @@ BSide:
       Idx: 0
       Kind: out
       ReqOut:
-        Dashes: one
+        Or:
+        - Dashes: one
+        - Dashes: zero
+          Difficulty: perfect # dashless bumper clip go
     - Side: Left
       Idx: 0
       Kind: in
