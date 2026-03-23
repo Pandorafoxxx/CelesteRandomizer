@@ -1051,6 +1051,14 @@ ASide:
   - Room: "b-00"
     Holes:
     - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+        - Dashes: zero
+          Difficulty: perfect # funny waterboost room
+    - Side: Up
       Idx: 1
       Kind: inout
       ReqOut:

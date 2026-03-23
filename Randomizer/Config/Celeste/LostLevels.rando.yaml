@@ -2057,7 +2057,7 @@ ASide:
       Kind: out
       ReqOut:
         Dashes: one 
-        Difficulty: master # that fall is actually terrible lol
+        Difficulty: perfect # that fall is actually terrible lol
     - Side: Down
       Idx: 0
       Kind: none
