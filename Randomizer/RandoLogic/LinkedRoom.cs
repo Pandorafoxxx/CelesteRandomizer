@@ -675,7 +675,10 @@ namespace Celeste.Mod.Randomizer
                     case "ContortHelper/TeleportationTrigger":
                     case "ContortHelper/TeleportationTriggerSimple":
                     case "ContortHelper/TeleportationTriggerMinimal":
-                        var attr = e.Name.StartsWith("ContortHelper/") ? "roomName" : "targetRoomId";
+                    case "VivHelper/BasicInstantTeleportTrigger":
+                    case "VivHelper/MainInstantTeleportTrigger":
+                    case "VivHelper/CustomInstantTeleportTrigger":
+                        var attr = e.Name.StartsWith("ContortHelper/") ? "roomName" : e.Name.StartsWith("VivHelper/") ? "RoomName" : "targetRoomId";
                         var target = e.Attr(attr, "");
                         if (target != "")
                         {
