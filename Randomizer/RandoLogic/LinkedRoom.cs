@@ -7,8 +7,6 @@ using MonoMod.Utils;
 
 namespace Celeste.Mod.Randomizer
 {
-    using FlagSet = Dictionary<string, FlagState>;
-
     public class LinkedMap
     {
         private List<LinkedRoom> Rooms = new List<LinkedRoom>();
@@ -668,6 +666,7 @@ namespace Celeste.Mod.Randomizer
         {
             foreach (var e in this.BakedRoom.Entities.Union(this.BakedRoom.Triggers))
             {
+                string target = "";
                 switch (e.Name)
                 {
                     case "AcidHelper/InstantTeleportTrigger":
@@ -675,11 +674,8 @@ namespace Celeste.Mod.Randomizer
                     case "ContortHelper/TeleportationTrigger":
                     case "ContortHelper/TeleportationTriggerSimple":
                     case "ContortHelper/TeleportationTriggerMinimal":
-                    case "VivHelper/BasicInstantTeleportTrigger":
-                    case "VivHelper/MainInstantTeleportTrigger":
-                    case "VivHelper/CustomInstantTeleportTrigger":
-                        var attr = e.Name.StartsWith("ContortHelper/") ? "roomName" : e.Name.StartsWith("VivHelper/") ? "RoomName" : "targetRoomId";
-                        var target = e.Attr(attr, "");
+                        var attr = e.Name.StartsWith("ContortHelper/") ? "roomName" : "targetRoomId";
+                        target = e.Attr(attr, "");
                         if (target != "")
                         {
                             if (!this.WarpMap.TryGetValue(target, out var targetRoom))
@@ -710,6 +706,43 @@ namespace Celeste.Mod.Randomizer
                     case "AcidHelper/GradualColorGradeChangeTrigger":
                     case "ShroomHelper/GradualColorGradeChangeTrigger":
                         e.Values["speed"] = 2f;
+                        break;
+
+                    case "VivHelper/BasicInstantTeleportTrigger":
+                    case "VivHelper/MainInstantTeleportTrigger":
+                    case "VivHelper/CustomInstantTeleportTrigger":
+                    case "VivHelper/ITPT1Way":
+                        target = e.Attr("RoomName", "");
+                        if (target != "") {
+                            if (!this.WarpMap.TryGetValue(target, out var targetRoom))
+                            {
+                                Logger.Log("randomizer", "Additional info for unconfigured warp");
+                                Logger.Log("randomizer", $"Warp: {this.Static.Name} -> {target}");
+                                Logger.Log("randomizer", $"Name/ID: {e.Name} {e.ID}");
+                                Logger.Log("randomizer", $"Position: {e.Position}");
+                                throw new GenerationError($"{this.Static.Name}: warp to {target} but no config");
+                            }
+                            e.Values["RoomName"] = targetRoom.BakedRoom.Name;
+                        } else {
+                            target = e.Attr("TargetID", null);
+                            if (target == null) {
+                                throw new GenerationError("${this.Static.Name}: I think a viv helper teleport is configured wrong; no RoomName or TargetID");
+                            }
+                            string foundIt = null;
+                            foreach (var room in this.WarpMap.Values) {
+                                foreach (var e2 in room.BakedRoom.Entities.Union(room.BakedRoom.Triggers)) {
+                                    if (e.Name == "VivHelper/TeleportTarget" && e.Attr("TargetID", null) == target) {
+                                        foundIt = room.BakedRoom.Name;
+                                        goto doublebreak;
+                                    }
+                                }
+                            }
+                            doublebreak:
+                            if (foundIt == null) {
+                                throw new GenerationError("${this.Static.Name}: I think a viv helper teleport is configured wrong; no matching TargetID found");
+                            }
+                            e.Values["RoomName"] = foundIt;
+                        }
                         break;
                 }
             }
