@@ -1175,7 +1175,10 @@ ASide:
     InternalEdges:
     - Split: BottomToTop
       ReqOut:
-        Dashes: one
+        Or:
+        - Dashes: one
+        - Dashes: zero
+          Difficulty: perfect # good luck with that 
       ReqIn:
         Dashes: zero
     Tweaks:
@@ -1476,11 +1479,13 @@ ASide:
     - To: "berry"
       ReqOut:
         Dashes: zero
+        Flag: boxes:unset
       ReqIn:
         Or:
         - Dashes: one
         - Dashes: zero
           Difficulty: perfect # go my spikefall
+          Flag: boxes:unset
     Subrooms:
       - Room: "left"
         Holes:

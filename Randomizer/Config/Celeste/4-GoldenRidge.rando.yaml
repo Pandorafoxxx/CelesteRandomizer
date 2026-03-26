@@ -739,7 +739,10 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqBoth:
-        Dashes: one
+        Or:
+        - Dashes: one
+        - Dashes: zero
+          Difficulty: perfect # what a nice and fun room
   - Room: "b-08b"
     Holes:
     - Side: Up

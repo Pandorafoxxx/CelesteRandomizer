@@ -3322,6 +3322,11 @@ BSide:
     - Side: Right
       Idx: 0
       Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
     - Side: Left
       Idx: 0
       Kind: in
@@ -3347,6 +3352,11 @@ BSide:
     - Side: Left
       Idx: 0
       Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
     - Side: Up
       Idx: 0
       Kind: Unknown
