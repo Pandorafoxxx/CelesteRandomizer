@@ -811,6 +811,8 @@ namespace Celeste.Mod.Randomizer
                         }
                         else
                         {
+                            if (econfig.Update?.Name != null)
+                                entity.Name = econfig.Update.Name;
                             if (econfig.Update?.X != null)
                                 entity.Position.X = econfig.Update.X.Value;
                             if (econfig.Update?.Y != null)

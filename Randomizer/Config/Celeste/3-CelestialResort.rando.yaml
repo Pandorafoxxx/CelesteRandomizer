@@ -3236,9 +3236,7 @@ CSide:
     - Name: "blackGem"
       ID: 490
       Update:
-        Values:
-          fake: true
-          persistent: false
+        Name: "fakeHeart"
     - Name: "oshiroTrigger"
       ID: 0
       Update:
