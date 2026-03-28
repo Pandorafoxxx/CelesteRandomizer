@@ -2519,12 +2519,12 @@ BSide:
       Kind: inout
       ReqOut:
         Dashes: one
-      ReqIn:
-        Dashes: two
-        Difficulty: perfect
     - Side: Down
       Idx: 0
       Kind: inout
+      ReqOut:
+        Dashes: two
+        Difficulty: perfect
     Tweaks:
     - Name: "randomizer/ActivateSwitches"
       Update:

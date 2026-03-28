@@ -2338,7 +2338,7 @@ ASide:
         - Dashes: one
           Difficulty: hard
       ReqIn:
-        Dashes: two
+        Dashes: one
         Difficulty: Perfect
     - Side: Left
       Idx: 0
